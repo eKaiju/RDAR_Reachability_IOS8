@@ -1,4 +1,4 @@
-RDAR_Reachability_IOS8
+RDAR 17977029 Reachability on IOS8
 ======================
 
 Sample code for rdar problem with reachability in iOS 8.

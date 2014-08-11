@@ -35,5 +35,5 @@
 	// In iOS 8 When the connections are interrupted The SCNetworkReachabilityFlags flags are still set so that if the application checks the device connection status, it is marked as online
 }
 
-NSURLErrorUserCancelledAuthentication
+
 @end
