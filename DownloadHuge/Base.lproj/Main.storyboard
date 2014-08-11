@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MzK-HX-pTd">
+                                <rect key="frame" x="336" y="497" width="97" height="30"/>
+                                <state key="normal" title="Load giant file">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="64B-jX-z4D"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ahp-p0-UgW">
+                                <rect key="frame" x="374" y="535" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="Cre-4F-O0x">
+                                <rect key="frame" x="20" y="320" width="728" height="169"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="169" id="6ac-Xp-tfJ"/>
+                                </constraints>
+                                <string key="text">- Step 1 : Hit "Load giant file" while online
+- Step 2 : Switch device to airplane mode
+
+- iOS 7 result and iOS 8 expected result : 
+When receiving the handler Reachability currentReachabilityStatus already returns NotReachable   
+
+- iOS 8 result : 
+Reachability currentReachabilityStatus will be updated to NotReachable after the error handler   </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cre-4F-O0x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="0pI-Gm-sf0"/>
+                            <constraint firstItem="Cre-4F-O0x" firstAttribute="centerX" secondItem="MzK-HX-pTd" secondAttribute="centerX" id="JZV-5K-cM4"/>
+                            <constraint firstAttribute="centerX" secondItem="ahp-p0-UgW" secondAttribute="centerX" id="MQy-I2-OFM"/>
+                            <constraint firstItem="ahp-p0-UgW" firstAttribute="top" secondItem="MzK-HX-pTd" secondAttribute="bottom" constant="8" symbolic="YES" id="Sqj-4I-iB6"/>
+                            <constraint firstItem="MzK-HX-pTd" firstAttribute="top" secondItem="Cre-4F-O0x" secondAttribute="bottom" constant="8" symbolic="YES" id="ccG-Y5-x25"/>
+                            <constraint firstAttribute="centerX" secondItem="MzK-HX-pTd" secondAttribute="centerX" id="gwq-J0-Mt3"/>
+                            <constraint firstAttribute="centerY" secondItem="MzK-HX-pTd" secondAttribute="centerY" id="vTN-wj-LDK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="indicatorView" destination="ahp-p0-UgW" id="pRL-gn-DNF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
